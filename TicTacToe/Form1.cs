@@ -39,11 +39,11 @@ namespace TicTacToe
             {
                 return System.Drawing.Color.LightGreen;
             }
-            else
+            else if(symbol.Equals("X"))
             {
                 return System.Drawing.Color.LightBlue;
             }
-                
+            return System.Drawing.Color.White;   
         }
 
         public void checkWinConditions()
@@ -51,32 +51,57 @@ namespace TicTacToe
             for (int i=0; i<8; i++)
             {
                 String combination = "";
+                int one = 0, two = 0, three = 0;
 
                 switch (i)
                 {
                     case 0:
                         combination = gameBoard[0] + gameBoard[1] + gameBoard[2];
+                        one = 0;
+                        two = 1;
+                        three = 2;
                         break;
                     case 1:
                         combination = gameBoard[3] + gameBoard[4] + gameBoard[5];
+                        one = 3;
+                        two = 4;
+                        three = 5;
                         break;
                     case 2:
                         combination = gameBoard[6] + gameBoard[7] + gameBoard[8];
+                        one = 6;
+                        two = 7;
+                        three = 8;
                         break;
                     case 3:
                         combination = gameBoard[0] + gameBoard[3] + gameBoard[6];
+                        one = 0;
+                        two = 3;
+                        three = 6;
                         break;
                     case 4:
                         combination = gameBoard[1] + gameBoard[4] + gameBoard[7];
+                        one = 1;
+                        two = 4;
+                        three = 7;
                         break;
                     case 5:
                         combination = gameBoard[2] + gameBoard[5] + gameBoard[8];
+                        one = 2;
+                        two = 5;
+                        three = 8;
                         break;
                     case 6:
                         combination = gameBoard[0] + gameBoard[4] + gameBoard[8];
+                        one = 0;
+                        two = 4;
+                        three = 8;
                         break;
                     case 7:
                         combination = gameBoard[2] + gameBoard[4] + gameBoard[6];
+                        one = 2;
+                        two = 4;
+                        three = 6;
                         break;
                 }
 
@@ -84,13 +109,21 @@ namespace TicTacToe
 
                 if (combination.Equals("OOO"))
                 {
+                    change_Color(one);
+                    change_Color(two);
+                    change_Color(three);
+
                     MessageBox.Show("O wins the game!" + "GG" + MessageBoxButtons.OK + MessageBoxIcon.Exclamation);
-                    reset();
+                   
                 }
                 else if (combination.Equals("XXX"))
                 {
+                    change_Color(one);
+                    change_Color(two);
+                    change_Color(three);
+
                     MessageBox.Show("X wins the game!" + "GG" + MessageBoxButtons.OK + MessageBoxIcon.Exclamation);
-                    reset();
+                    
                 }
 
                 checkDrawConditions();
@@ -108,8 +141,51 @@ namespace TicTacToe
             button6.Text = "";
             button7.Text = "";
             button8.Text = "";
+
+            button1.BackColor = System.Drawing.Color.White;
+            button2.BackColor = System.Drawing.Color.White;
+            button3.BackColor = System.Drawing.Color.White;
+            button4.BackColor = System.Drawing.Color.White;
+            button5.BackColor = System.Drawing.Color.White;
+            button6.BackColor = System.Drawing.Color.White;
+            button7.BackColor = System.Drawing.Color.White;
+            button8.BackColor = System.Drawing.Color.White;
             gameBoard = new string[9];
             current_Turn = 0;
+        }
+
+        public void change_Color(int number)
+        {
+            switch (number)
+            {
+                case 0:
+                    button1.BackColor = System.Drawing.Color.Red;
+                    break;
+                case 1:
+                    button2.BackColor = System.Drawing.Color.Red;
+                    break;
+                case 2:
+                    button3.BackColor = System.Drawing.Color.Red;
+                    break;
+                case 3:
+                    button4.BackColor = System.Drawing.Color.Red;
+                    break;
+                case 4:
+                    button5.BackColor = System.Drawing.Color.Red;
+                    break;
+                case 5:
+                    button6.BackColor = System.Drawing.Color.Red;
+                    break;
+                case 6:
+                    button7.BackColor = System.Drawing.Color.Red;
+                    break;
+                case 7:
+                    button8.BackColor = System.Drawing.Color.Red;
+                    break;
+                case 8:
+                    button9.BackColor = System.Drawing.Color.Red;
+                    break;
+            }
         }
 
         public void checkDrawConditions()
@@ -215,6 +291,11 @@ namespace TicTacToe
             button9.BackColor = button_Color;
             button9.Text = gameBoard[8];
             checkWinConditions();
+        }
+
+        private void reset_Button_Click(object sender, EventArgs e)
+        {
+            reset();
         }
     }
 }

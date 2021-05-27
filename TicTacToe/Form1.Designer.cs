@@ -38,6 +38,7 @@ namespace TicTacToe
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
+            this.reset_Button = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -130,11 +131,25 @@ namespace TicTacToe
             this.button9.UseVisualStyleBackColor = false;
             this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
+            // reset_Button
+            // 
+            this.reset_Button.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.reset_Button.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.reset_Button.ForeColor = System.Drawing.Color.Black;
+            this.reset_Button.Location = new System.Drawing.Point(10, 255);
+            this.reset_Button.Name = "reset_Button";
+            this.reset_Button.Size = new System.Drawing.Size(237, 44);
+            this.reset_Button.TabIndex = 9;
+            this.reset_Button.Text = "Restart";
+            this.reset_Button.UseVisualStyleBackColor = false;
+            this.reset_Button.Click += new System.EventHandler(this.reset_Button_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(260, 259);
+            this.ClientSize = new System.Drawing.Size(260, 311);
+            this.Controls.Add(this.reset_Button);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.button7);
@@ -148,6 +163,7 @@ namespace TicTacToe
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "Tic-Tac-Toe";
+            this.TopMost = true;
             this.ResumeLayout(false);
 
         }
@@ -163,6 +179,7 @@ namespace TicTacToe
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button reset_Button;
     }
 }
 
