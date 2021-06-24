@@ -148,7 +148,7 @@ namespace TicTacToe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(260, 311);
+            this.ClientSize = new System.Drawing.Size(260, 309);
             this.Controls.Add(this.reset_Button);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.button8);
@@ -164,6 +164,7 @@ namespace TicTacToe
             this.Name = "Form1";
             this.Text = "Tic-Tac-Toe";
             this.TopMost = true;
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
 
         }

@@ -12,6 +12,9 @@ namespace TicTacToe
 {
     public partial class Form1 : Form
     {
+        byte counter_O = 0;
+        byte counter_X = 0;
+
         public Form1()
         {
             InitializeComponent();
@@ -296,6 +299,11 @@ namespace TicTacToe
         private void reset_Button_Click(object sender, EventArgs e)
         {
             reset();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
