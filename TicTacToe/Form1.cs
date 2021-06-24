@@ -116,7 +116,7 @@ namespace TicTacToe
                     change_Color(two);
                     change_Color(three);
 
-                    MessageBox.Show("O wins the game!" + "GG" + MessageBoxButtons.OK + MessageBoxIcon.Exclamation);
+                    MessageBox.Show("O wins the game! " + "\r\n" + "GG" + MessageBoxButtons.OK + MessageBoxIcon.Exclamation);
                    
                 }
                 else if (combination.Equals("XXX"))
@@ -125,7 +125,7 @@ namespace TicTacToe
                     change_Color(two);
                     change_Color(three);
 
-                    MessageBox.Show("X wins the game!" + "GG" + MessageBoxButtons.OK + MessageBoxIcon.Exclamation);
+                    MessageBox.Show("X wins the game! "+ "\r\n" + "GG" + MessageBoxButtons.OK + MessageBoxIcon.Exclamation);
                     
                 }
 
@@ -201,7 +201,7 @@ namespace TicTacToe
                 if (counter == 9) 
                 {
                     reset();
-                    MessageBox.Show("The game is a draw!" + "WP" + MessageBoxButtons.OK + MessageBoxIcon.Exclamation);
+                    MessageBox.Show("The game is a draw! " + "\r\n" + "WP" + MessageBoxButtons.OK + MessageBoxIcon.Exclamation);
                 }
             }
         }
