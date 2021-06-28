@@ -12,9 +12,6 @@ namespace TicTacToe
 {
     public partial class Form1 : Form
     {
-        byte score1 = 0;
-        byte score2 = 0;
-
         public Form1()
         {
             InitializeComponent();
@@ -107,8 +104,6 @@ namespace TicTacToe
                         three = 6;
                         break;
                 }
-
-                checkDrawConditions();
 
                 if (combination.Equals("OOO"))
                 {
