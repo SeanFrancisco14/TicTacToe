@@ -12,8 +12,8 @@ namespace TicTacToe
 {
     public partial class Form1 : Form
     {
-        byte counter_O = 0;
-        byte counter_X = 0;
+        byte score1 = 0;
+        byte score2 = 0;
 
         public Form1()
         {
