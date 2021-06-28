@@ -116,7 +116,7 @@ namespace TicTacToe
                     change_Color(two);
                     change_Color(three);
 
-                    MessageBox.Show("O wins the game! " + "\r\n" + "GG" + MessageBoxButtons.OK + MessageBoxIcon.Exclamation);
+                    MessageBox.Show("O wins the game! " + "\r\n" + "GG ");
                    
                 }
                 else if (combination.Equals("XXX"))
@@ -125,7 +125,7 @@ namespace TicTacToe
                     change_Color(two);
                     change_Color(three);
 
-                    MessageBox.Show("X wins the game! "+ "\r\n" + "GG" + MessageBoxButtons.OK + MessageBoxIcon.Exclamation);
+                    MessageBox.Show("X wins the game! "+ "\r\n" + "GG ");
                     
                 }
 
@@ -144,6 +144,7 @@ namespace TicTacToe
             button6.Text = "";
             button7.Text = "";
             button8.Text = "";
+            button9.Text = "";
 
             button1.BackColor = System.Drawing.Color.White;
             button2.BackColor = System.Drawing.Color.White;
@@ -153,6 +154,7 @@ namespace TicTacToe
             button6.BackColor = System.Drawing.Color.White;
             button7.BackColor = System.Drawing.Color.White;
             button8.BackColor = System.Drawing.Color.White;
+            button9.BackColor = System.Drawing.Color.White;
             gameBoard = new string[9];
             current_Turn = 0;
         }
