@@ -12,9 +12,6 @@ namespace TicTacToe
 {
     public partial class Form1 : Form
     {
-        byte score1 = 0;
-        byte score2 = 0;
-
         public Form1()
         {
             InitializeComponent();
@@ -37,7 +34,6 @@ namespace TicTacToe
 
         public System.Drawing.Color determineColor(String symbol)
         {
-
             if (symbol.Equals("O"))
             {
                 return System.Drawing.Color.LightGreen;
@@ -108,8 +104,6 @@ namespace TicTacToe
                         break;
                 }
 
-                checkDrawConditions();
-
                 if (combination.Equals("OOO"))
                 {
                     change_Color(one);
@@ -117,7 +111,6 @@ namespace TicTacToe
                     change_Color(three);
 
                     MessageBox.Show("O wins the game! " + "\r\n" + "GG ");
-                   
                 }
                 else if (combination.Equals("XXX"))
                 {
@@ -126,7 +119,6 @@ namespace TicTacToe
                     change_Color(three);
 
                     MessageBox.Show("X wins the game! "+ "\r\n" + "GG ");
-                    
                 }
 
                 checkDrawConditions();

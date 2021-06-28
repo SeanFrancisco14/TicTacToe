@@ -39,12 +39,6 @@ namespace TicTacToe
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.reset_Button = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.lbl_player1 = new System.Windows.Forms.Label();
-            this.lbl_player2 = new System.Windows.Forms.Label();
-            this.txtbox_player1 = new System.Windows.Forms.TextBox();
-            this.txtbox_player2 = new System.Windows.Forms.TextBox();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
@@ -151,70 +145,21 @@ namespace TicTacToe
             this.reset_Button.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.reset_Button.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.reset_Button.ForeColor = System.Drawing.Color.Black;
-            this.reset_Button.Location = new System.Drawing.Point(-2, 213);
+            this.reset_Button.Location = new System.Drawing.Point(12, 301);
             this.reset_Button.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.reset_Button.Name = "reset_Button";
-            this.reset_Button.Size = new System.Drawing.Size(253, 52);
+            this.reset_Button.Size = new System.Drawing.Size(271, 52);
             this.reset_Button.TabIndex = 9;
             this.reset_Button.Text = "Restart";
             this.reset_Button.UseVisualStyleBackColor = false;
             this.reset_Button.Click += new System.EventHandler(this.reset_Button_Click);
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Controls.Add(this.txtbox_player2);
-            this.panel1.Controls.Add(this.reset_Button);
-            this.panel1.Controls.Add(this.txtbox_player1);
-            this.panel1.Controls.Add(this.lbl_player2);
-            this.panel1.Controls.Add(this.lbl_player1);
-            this.panel1.Location = new System.Drawing.Point(301, 14);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(253, 279);
-            this.panel1.TabIndex = 10;
-            this.panel1.TabStop = true;
-            // 
-            // lbl_player1
-            // 
-            this.lbl_player1.AutoSize = true;
-            this.lbl_player1.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbl_player1.Location = new System.Drawing.Point(11, 12);
-            this.lbl_player1.Name = "lbl_player1";
-            this.lbl_player1.Size = new System.Drawing.Size(46, 46);
-            this.lbl_player1.TabIndex = 0;
-            this.lbl_player1.Text = "O";
-            // 
-            // lbl_player2
-            // 
-            this.lbl_player2.AutoSize = true;
-            this.lbl_player2.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbl_player2.Location = new System.Drawing.Point(11, 67);
-            this.lbl_player2.Name = "lbl_player2";
-            this.lbl_player2.Size = new System.Drawing.Size(40, 46);
-            this.lbl_player2.TabIndex = 1;
-            this.lbl_player2.Text = "X";
-            // 
-            // txtbox_player1
-            // 
-            this.txtbox_player1.Location = new System.Drawing.Point(63, 29);
-            this.txtbox_player1.Name = "txtbox_player1";
-            this.txtbox_player1.Size = new System.Drawing.Size(134, 27);
-            this.txtbox_player1.TabIndex = 2;
-            // 
-            // txtbox_player2
-            // 
-            this.txtbox_player2.Location = new System.Drawing.Point(63, 84);
-            this.txtbox_player2.Name = "txtbox_player2";
-            this.txtbox_player2.Size = new System.Drawing.Size(134, 27);
-            this.txtbox_player2.TabIndex = 3;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(573, 307);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(304, 366);
+            this.Controls.Add(this.reset_Button);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.button7);
@@ -231,8 +176,6 @@ namespace TicTacToe
             this.Text = "Tic-Tac-Toe";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -249,11 +192,6 @@ namespace TicTacToe
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button reset_Button;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox txtbox_player2;
-        private System.Windows.Forms.TextBox txtbox_player1;
-        private System.Windows.Forms.Label lbl_player2;
-        private System.Windows.Forms.Label lbl_player1;
     }
 }
 
